@@ -1,0 +1,187 @@
+/* Medical Device Dashboard Styles */
+
+.dashboard-container {
+  padding: 24px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.stats-card {
+  text-align: center;
+  padding: 20px;
+}
+
+.stats-card .value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.device-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out;
+}
+
+.device-card:hover {
+  transform: translateY(-4px);
+}
+
+.battery-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.installation-progress {
+  margin: 16px 0;
+}
+
+.photo-upload-area {
+  border: 2px dashed #1976d2;
+  border-radius: 8px;
+  padding: 32px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.photo-upload-area:hover {
+  background-color: rgba(25, 118, 210, 0.04);
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.photo-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.photo-item:hover {
+  transform: scale(1.02);
+}
+
+.service-visit-card {
+  border-left: 4px solid transparent;
+}
+
+.service-visit-card.preventive {
+  border-left-color: #4caf50;
+}
+
+.service-visit-card.breakdown {
+  border-left-color: #f44336;
+}
+
+.service-visit-card.installation {
+  border-left-color: #2196f3;
+}
+
+.contract-table {
+  margin-top: 16px;
+}
+
+.contract-row.expiring {
+  background-color: rgba(255, 152, 0, 0.1);
+}
+
+.contract-row.expired {
+  background-color: rgba(244, 67, 54, 0.1);
+}
+
+.alert-banner {
+  margin-bottom: 16px;
+}
+
+.filter-section {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.mobile-responsive {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .mobile-responsive {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 64px 16px;
+  color: #666;
+}
+
+.empty-state h3 {
+  margin-bottom: 8px;
+  color: #999;
+}
+
+.empty-state p {
+  margin-bottom: 24px;
+  color: #bbb;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 16px;
+  }
+
+  .page-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .action-buttons {
+    justify-content: center;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
