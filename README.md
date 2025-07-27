@@ -22,15 +22,17 @@ A comprehensive admin dashboard for managing medical device inventories, trackin
 
 ## 🛠️ Tech Stack
 
-- **Frontend Framework**: React 18 with Hooks
-- **State Management**: Redux Toolkit (RTK) with localStorage persistence
-- **UI Library**: Material-UI (MUI) v5 with custom theming
-- **Styling**: SCSS Modules + Material-UI styling system
-- **Routing**: React Router v6 with protected routes
-- **Build Tool**: Vite for fast development and optimized builds
-- **Date Handling**: date-fns for date manipulation and formatting
+- **Frontend Framework**: React 19.1.0 with modern Hooks
+- **State Management**: Redux Toolkit 2.8.2 with localStorage persistence
+- **UI Library**: Material-UI 7.2.0 with custom theming
+- **Styling**: SCSS + Emotion + Material-UI styling system
+- **Routing**: React Router 7.7.1 with modern routing
+- **Build Tool**: Vite 7.0.6 for fast development and optimized builds
+- **Date Handling**: date-fns 4.1.0 for date manipulation and formatting
 - **File Handling**: HTML5 File API for photo uploads
 - **Validation**: Custom validation utilities with real-time feedback
+- **Icons**: Material-UI Icons 7.2.0
+- **Data Grid**: Material-UI X Data Grid 8.9.1
 
 ## 📦 Installation
 

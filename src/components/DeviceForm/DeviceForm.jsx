@@ -14,7 +14,6 @@ import {
   MenuItem,
   Slider,
   Typography,
-  Box,
   Alert,
 } from '@mui/material'
 import { addDevice, updateDevice } from '../../store/slices/devicesSlice'
@@ -130,7 +129,7 @@ function DeviceForm({ open, onClose, device }) {
     }
   }
 
-  const handleBatteryChange = (event, newValue) => {
+  const handleBatteryChange = (_, newValue) => {
     setFormData(prev => ({
       ...prev,
       batteryLevel: newValue,
@@ -339,7 +338,7 @@ function DeviceForm({ open, onClose, device }) {
               type="date"
               value={formData.purchaseDate}
               onChange={handleChange('purchaseDate')}
-              InputLabelProps={{ shrink: true }}
+              slotProps={{ inputLabel: { shrink: true } }}
             />
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -349,7 +348,7 @@ function DeviceForm({ open, onClose, device }) {
               type="date"
               value={formData.warrantyExpiry}
               onChange={handleChange('warrantyExpiry')}
-              InputLabelProps={{ shrink: true }}
+              slotProps={{ inputLabel: { shrink: true } }}
             />
           </Grid>
           <Grid item xs={12} sm={6}>

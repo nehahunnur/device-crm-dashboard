@@ -123,9 +123,10 @@ function Layout({ children }) {
               onClick={() => handleNavigation(item.path)}
               sx={{
                 '&.Mui-selected': {
-                  backgroundColor: `${theme.palette.primary.main}20`,
+                  backgroundColor: theme.palette.primary.main,
+                  opacity: 0.12,
                   '&:hover': {
-                    backgroundColor: `${theme.palette.primary.main}30`,
+                    opacity: 0.16,
                   },
                 },
               }}

@@ -435,7 +435,7 @@ function ServiceVisits() {
                 type="date"
                 value={formData.visitDate}
                 onChange={(e) => setFormData(prev => ({ ...prev, visitDate: e.target.value }))}
-                InputLabelProps={{ shrink: true }}
+                slotProps={{ inputLabel: { shrink: true } }}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -494,7 +494,7 @@ function ServiceVisits() {
                 type="date"
                 value={formData.nextServiceDate}
                 onChange={(e) => setFormData(prev => ({ ...prev, nextServiceDate: e.target.value }))}
-                InputLabelProps={{ shrink: true }}
+                slotProps={{ inputLabel: { shrink: true } }}
               />
             </Grid>
             <Grid item xs={12}>

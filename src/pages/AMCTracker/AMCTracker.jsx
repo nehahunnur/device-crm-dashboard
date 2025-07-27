@@ -560,7 +560,7 @@ function AMCTracker() {
                 type="date"
                 value={formData.startDate}
                 onChange={(e) => setFormData(prev => ({ ...prev, startDate: e.target.value }))}
-                InputLabelProps={{ shrink: true }}
+                slotProps={{ inputLabel: { shrink: true } }}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -570,7 +570,7 @@ function AMCTracker() {
                 type="date"
                 value={formData.endDate}
                 onChange={(e) => setFormData(prev => ({ ...prev, endDate: e.target.value }))}
-                InputLabelProps={{ shrink: true }}
+                slotProps={{ inputLabel: { shrink: true } }}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -703,7 +703,7 @@ function AMCTracker() {
                 type="date"
                 value={renewalData.newEndDate}
                 onChange={(e) => setRenewalData(prev => ({ ...prev, newEndDate: e.target.value }))}
-                InputLabelProps={{ shrink: true }}
+                slotProps={{ inputLabel: { shrink: true } }}
               />
             </Grid>
             <Grid item xs={12}>

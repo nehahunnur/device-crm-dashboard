@@ -476,7 +476,7 @@ function PhotoLogs() {
                 type="date"
                 value={tempFilters.dateRange.start || ''}
                 onChange={(e) => handleDateRangeChange('start', e.target.value)}
-                InputLabelProps={{ shrink: true }}
+                slotProps={{ inputLabel: { shrink: true } }}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -486,7 +486,7 @@ function PhotoLogs() {
                 type="date"
                 value={tempFilters.dateRange.end || ''}
                 onChange={(e) => handleDateRangeChange('end', e.target.value)}
-                InputLabelProps={{ shrink: true }}
+                slotProps={{ inputLabel: { shrink: true } }}
               />
             </Grid>
           </Grid>

@@ -8,6 +8,26 @@ import { store } from './store/store'
 import './index.css'
 import App from './App.jsx'
 
+// Enhanced error logging
+const originalConsoleError = console.error
+console.error = (...args) => {
+  // Log React warnings and errors
+  if (args[0] && typeof args[0] === 'string') {
+    if (args[0].includes('Warning:') || args[0].includes('Error:')) {
+      console.log('🔍 React Warning/Error detected:', ...args)
+    }
+  }
+  originalConsoleError.apply(console, args)
+}
+
+window.addEventListener('error', (event) => {
+  console.error('🚨 Global error:', event.error)
+})
+
+window.addEventListener('unhandledrejection', (event) => {
+  console.error('🚨 Unhandled promise rejection:', event.reason)
+})
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -20,14 +40,12 @@ const theme = createTheme({
 })
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <Provider store={store}>
-      <BrowserRouter>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <App />
-        </ThemeProvider>
-      </BrowserRouter>
-    </Provider>
-  </StrictMode>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <App />
+      </ThemeProvider>
+    </BrowserRouter>
+  </Provider>
 )

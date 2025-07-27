@@ -10,6 +10,9 @@ import AMCTracker from './pages/AMCTracker/AMCTracker'
 import PhotoLogs from './pages/PhotoLogs/PhotoLogs'
 import './App.css'
 
+// Add console logging to catch any React warnings
+console.log('🚀 App component loaded successfully')
+
 function App() {
   return (
     <ErrorBoundary>

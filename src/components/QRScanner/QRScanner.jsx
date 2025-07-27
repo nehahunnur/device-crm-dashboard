@@ -46,6 +46,11 @@ function QRScanner({ open, onClose, onScan, title = "Scan QR Code" }) {
       setError(null)
       setIsScanning(true)
 
+      // Check if mediaDevices is supported
+      if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+        throw new Error('Camera access not supported in this browser')
+      }
+
       // Request camera permission
       const mediaStream = await navigator.mediaDevices.getUserMedia({
         video: {

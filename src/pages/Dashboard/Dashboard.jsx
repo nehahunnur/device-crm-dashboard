@@ -190,7 +190,7 @@ function Dashboard() {
               </Typography>
               <List dense>
                 {recentActivities.map((activity, index) => (
-                  <ListItem key={index} divider={index < recentActivities.length - 1}>
+                  <ListItem key={`${activity.type}-${activity.date}-${index}`} divider={index < recentActivities.length - 1}>
                     <ListItemIcon>
                       {activity.type === 'Service Visit' ? (
                         <EngineeringIcon color={getStatusColor(activity.status)} />

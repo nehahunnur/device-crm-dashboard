@@ -373,7 +373,7 @@ function Installation() {
                 type="date"
                 value={formData.installationDate}
                 onChange={(e) => setFormData(prev => ({ ...prev, installationDate: e.target.value }))}
-                InputLabelProps={{ shrink: true }}
+                slotProps={{ inputLabel: { shrink: true } }}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -424,7 +424,7 @@ function Installation() {
                 type="date"
                 value={trainingData.trainingDate}
                 onChange={(e) => setTrainingData(prev => ({ ...prev, trainingDate: e.target.value }))}
-                InputLabelProps={{ shrink: true }}
+                slotProps={{ inputLabel: { shrink: true } }}
               />
             </Grid>
             <Grid item xs={12}>
